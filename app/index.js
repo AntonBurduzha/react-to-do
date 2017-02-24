@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { Provider } from 'react-redux'
 import ReactDOM from 'react-dom'
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import router from './router'
+import store from './store'
+import "../node_modules/react-toggle-switch/dist/css/switch.min.css"
 import './styles/style.scss'
 
-class App extends Component {
-  render(){
-    return <h1 className="test text-center">Init proj</h1>
-  }
-}
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <Provider store={store}>{router}</Provider>,
+  document.getElementById('root')
+);
