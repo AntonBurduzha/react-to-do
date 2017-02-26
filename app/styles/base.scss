@@ -1,0 +1,17 @@
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+}
+
+.gu-mirror {
+  display: none;
+}
+
+.switch {
+  vertical-align: middle;
+}
+
+.switch.on {
+  background: $main-color;
+}

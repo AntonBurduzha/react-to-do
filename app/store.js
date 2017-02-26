@@ -1,8 +1,8 @@
 import {createStore, combineReducers} from 'redux'
-import testReducer from './containers/App/reducers'
+import taskReducer from './containers/reducers'
 
 const reducers = {
-  testState: testReducer
+  taskState: taskReducer
 };
 
 const reducer = combineReducers(reducers);

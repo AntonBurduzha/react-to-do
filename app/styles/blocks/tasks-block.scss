@@ -1,0 +1,40 @@
+.article-tasks {
+  padding: 5px;
+
+  .article-tasks-current {
+    border: 2px solid $border-btn;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 2px;
+    padding: 5px;
+    width: 90%;
+  }
+
+  .text-task-name {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    width: 50%;
+  }
+
+  .article-tasks-control {
+    display: inline-block;
+    width: 20%;
+  }
+
+  .btn-remove-task {
+    display: block;
+    width: 100%;
+  }
+
+  .btn-complete-task {
+    display: block;
+    width: 100%;
+  }
+}
+
+.task-closed {
+  text-decoration: line-through;
+}

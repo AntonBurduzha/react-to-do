@@ -2,3 +2,8 @@
   text-decoration: line-through;
 }
 
+@import 'base';
+@import 'variables';
+@import 'blocks/input-block';
+@import 'blocks/tasks-block';
+@import 'blocks/timer-block';
