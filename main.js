@@ -1,19 +1,26 @@
-const electron = require('electron');
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+import { app, BrowserWindow } from 'electron';
+import path from 'path';
 
-app.on('ready', () => {
+var mainWindow = null;
+
+
+
+app.on('window-all-closed', () => {
+  if (process.platform != 'darwin') {
+    app.quit();
+  }
+});
+
+app.on('ready', function() {
   mainWindow = new BrowserWindow({
-    height: 400,
-    width: 400
+    width: 800,
+    height: 600
   });
 
-  // load the local HTML file
-  let url = require('url').format({
-    protocol: 'file',
-    slashes: true,
-    pathname: require('path').join(__dirname, '/public/index.html')
+  mainWindow.loadURL(path.join('file://', __dirname, 'public', 'index.html'));
+  mainWindow.openDevTools();
+
+  mainWindow.on('closed', function() {
+    mainWindow = null;
   });
-  console.log(url);
-  mainWindow.loadURL(url)
 });
