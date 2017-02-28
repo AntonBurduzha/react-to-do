@@ -1,4 +1,4 @@
 .idea/
 /node_modules/
-/public/js
-/public/style.css
+/public/web-app-project/js
+/public/electron-project/style.css

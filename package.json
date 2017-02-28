@@ -6,7 +6,7 @@
   "scripts": {
     "prod": "webpack -p",
     "dev": "node_modules/.bin/webpack-dev-server --inline --hot",
-    "build-css": "node-sass --include-path app/styles app/styles/style.scss public/style.css",
+    "build-css": "node-sass --include-path app/styles app/styles/style.scss public/electron-project/style.css",
     "electron": "electron -r babel-register main.js"
   },
   "author": "",

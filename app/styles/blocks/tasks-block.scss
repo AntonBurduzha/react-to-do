@@ -1,5 +1,7 @@
 .article-tasks {
-  padding: 5px;
+  background-color: $white;
+  padding: 25px;
+  padding-top: 0;
 
   .article-tasks-current {
     border: 2px solid $border-btn;
@@ -9,12 +11,14 @@
     margin: auto;
     margin-bottom: 2px;
     padding: 5px;
+    padding-left: 15px;
     width: 90%;
   }
 
   .text-task-name {
     display: inline-block;
     vertical-align: middle;
+    font-size: 16px;
     margin: 0;
     width: 50%;
   }
@@ -25,13 +29,47 @@
   }
 
   .btn-remove-task {
+    background-color: $main-color;
+    border: 2px solid $border-btn;
+    border-bottom: 1px solid $border-btn;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
     display: block;
+    color: $white;
+    font-weight: bold;
+    outline: none;
     width: 100%;
+
+    &:hover,
+    &:focus,
+    &:active:focus,
+    &:active:hover {
+      background-color: $main-hover-color;
+      color: $white;
+      outline: none;
+    }
   }
 
   .btn-complete-task {
+    background-color: $main-color;
+    border: 2px solid $border-btn;
+    border-top: 1px solid $border-btn;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
     display: block;
+    color: $white;
+    font-weight: bold;
+    outline: none;
     width: 100%;
+
+    &:hover,
+    &:focus,
+    &:active:focus,
+    &:active:hover {
+      background-color: $main-hover-color;
+      color: $white;
+      outline: none;
+    }
   }
 }
 

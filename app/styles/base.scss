@@ -4,14 +4,34 @@
   box-sizing: border-box;
 }
 
-.gu-mirror {
-  display: none;
-}
-
 .switch {
   vertical-align: middle;
 }
 
 .switch.on {
   background: $main-color;
+}
+
+.gu-mirror {
+  display: none;
+}
+.gu-hide {
+  display: none !important;
+}
+.gu-unselectable {
+  user-select: none !important;
+}
+.gu-transit {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.article-fluid {
+  background-color: $border-btn;
+  padding: 40px 0;
+}
+
+.article-main {
+  background-color: $white;
+  border-radius: 25px;
 }

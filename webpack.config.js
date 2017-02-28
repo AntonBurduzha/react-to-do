@@ -3,9 +3,9 @@ const prod = process.argv.indexOf('-p') !== -1;
 const webpack = require('webpack');
 
 let config = {
-  entry: "./app/index",
+  entry: ['./app/index', './app/styles.vendor'],
   output: {
-    path: __dirname + '/public/js',
+    path: __dirname + '/public/web-app-project/js',
     publicPath: '/js/',
     filename: "bundle.js"
   },
@@ -47,7 +47,7 @@ let config = {
     })
   ],
   devServer: {
-    contentBase: './public'
+    contentBase: './public/web-app-project'
   }
 };
 
@@ -55,7 +55,7 @@ config.plugins = config.plugins || [];
 if (prod) {
   config.plugins.push(new webpack.DefinePlugin({
     'process.env': {
-      //'NODE_ENV': "production"
+      'NODE_ENV': "production"
     }
   }));
   config.plugins.push(new webpack.optimize.UglifyJsPlugin({

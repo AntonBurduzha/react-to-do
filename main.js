@@ -1,9 +1,7 @@
 import { app, BrowserWindow } from 'electron';
 import path from 'path';
 
-var mainWindow = null;
-
-
+let mainWindow = null;
 
 app.on('window-all-closed', () => {
   if (process.platform != 'darwin') {
@@ -11,16 +9,15 @@ app.on('window-all-closed', () => {
   }
 });
 
-app.on('ready', function() {
+app.on('ready', () => {
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600
+    width: 1366,
+    height: 768
   });
 
-  mainWindow.loadURL(path.join('file://', __dirname, 'public', 'index.html'));
-  mainWindow.openDevTools();
+  mainWindow.loadURL(path.join('file://', __dirname, 'public', 'electron-project', 'index.html'));
 
-  mainWindow.on('closed', function() {
+  mainWindow.on('closed', () => {
     mainWindow = null;
   });
 });
