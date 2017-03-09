@@ -1,3 +1,5 @@
+'use strict';
+
 const autoprefixer = require('autoprefixer');
 const prod = process.argv.indexOf('-p') !== -1;
 const webpack = require('webpack');
@@ -19,7 +21,22 @@ let config = {
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader', 'sasslint-loader']
+        use: [
+            {
+              loader: 'style-loader'
+            },
+            {
+              loader: 'css-loader'
+            },
+            {
+              loader: 'postcss-loader'
+            },
+            {
+              loader: 'sass-loader'
+            },
+            {
+              loader: 'sasslint-loader'
+            }]
       },
       {
         test: /\.css$/,
